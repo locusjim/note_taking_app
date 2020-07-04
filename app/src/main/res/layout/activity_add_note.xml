@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1">
+    <!--toolbar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@color/colorwhite">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:tint="@color/colorblack"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/note_header"
+            android:text="@string/add_note"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/colorblack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/back_btn"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+    <EditText
+        android:textStyle="bold"
+        android:textColor="@color/colorblack"
+        android:textSize="20dp"
+        android:id="@+id/note_title"
+        android:hint="@string/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_bg"
+        android:paddingLeft="10dp"/>
+    <EditText
+        android:textStyle="bold"
+        android:textColor="@color/colorblack"
+        android:id="@+id/note_body"
+        android:hint="@string/write_something"
+        android:layout_margin="10sp"
+        android:layout_padding=""
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/note_title"
+        android:background="@drawable/edittext_bg"
+        android:gravity="top"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note_body"
+        android:text="Select Color"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorblack"
+        android:id="@+id/color_selecting"
+        />
+
+
+
+    <!--color palette-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/color_selecting"
+        android:orientation="horizontal">
+        <!--view = custom view-->
+
+        <view
+            android:background="@drawable/circular_color_list"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/white_color"
+            />
+        <view
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/orange_color"
+            android:background="@drawable/circular_color_list"
+            android:backgroundTint="#C3FF5722"
+
+            />
+        <view
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/yellow_color"
+            android:backgroundTint="#F0FFEB3B"
+            android:background="@drawable/circular_color_list"
+            />
+        <view
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:backgroundTint="#96E889"
+            android:id="@+id/green_color"
+            android:background="@drawable/circular_color_list"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:text="@string/save_note"
+        android:textSize="15sp"
+        android:textColor="@color/colorwhite"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+
+</RelativeLayout>

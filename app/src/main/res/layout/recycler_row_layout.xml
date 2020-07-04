@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/card"
+    >
+    <!--to make it fit  , both should be same layout width -->
+    <TextView
+        android:id="@+id/title"
+        android:text="This is the title"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="15sp"
+        android:textColor="@color/colorblack"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/body"
+        android:text="This is the body"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="15sp"
+        android:textColor="@color/colorblack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="10dp"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+
+</RelativeLayout>
